@@ -12,15 +12,16 @@ import { Divider, IconButton, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center"
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingLeft: 20
   },
   paper: {
     marginRight: theme.spacing(2)
   }
 }));
 
-export default function MenuListComposition() {
+const CustomMenu = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -55,8 +56,8 @@ export default function MenuListComposition() {
   }, [open]);
 
   return (
-    <div className={classes.root}>
-      <Typography>LOGO</Typography>
+    <Paper className={classes.root}>
+      <Typography>Mika</Typography>
       <div>
         <IconButton
           ref={anchorRef}
@@ -104,6 +105,8 @@ export default function MenuListComposition() {
           )}
         </Popper>
       </div>
-    </div>
+    </Paper>
   );
-}
+};
+
+export default CustomMenu;

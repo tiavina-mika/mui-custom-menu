@@ -1,7 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import CustomMenu from "./CustomMenu";
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Demo from './demo';
-
-ReactDOM.render(<Demo />, document.querySelector('#root'));
-    
+ReactDOM.render(<CustomMenu />, document.querySelector("#root"));
